@@ -1,0 +1,26 @@
+{
+  "name": "facebook-chat-bot",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asychronous/facebook-chat-bot.git"
+  },
+  "keywords": [
+    "facebook"
+  ],
+  "author": "John-Lin <linton.tw@gmail.com> (http://linton.tw)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Asychronous/facebook-chat-bot/issues"
+  },
+  "homepage": "https://github.com/Asychronous/facebook-chat-bot#readme",
+  "dependencies": {
+    "facebook-chat-api": "^1.0.3",
+    "request": "^2.65.0"
+  }
+}
