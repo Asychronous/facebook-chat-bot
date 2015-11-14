@@ -13,7 +13,7 @@ login(config.FACEBOOK, function callback(err, api) {
           command.doChat(event, function(err, success) {
           });
         } else if (event.body === '#invite') {
-          command.doInvite(event, api);
+          command.doInvited(event, api);
         } else if (event.body === '#leave') {
           command.doLeave(event, api);
         } else if (event.body === '#next') {
