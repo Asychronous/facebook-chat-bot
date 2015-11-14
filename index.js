@@ -18,6 +18,8 @@ login(config.FACEBOOK, function callback(err, api) {
           command.doLeave(event, api);
         } else if (event.body === '#next') {
           command.doNext(event, api);
+        } else if (event.body === '#register') {
+          command.doRegister(event, api);
         } else {
           command.doMessage(event, api);
         }
