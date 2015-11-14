@@ -10,14 +10,13 @@ login(config.FACEBOOK, function callback(err, api) {
     switch (event.type) {
       case 'message':
         if (event.body === '#chat') {
-          command.doChat(event, function(err, success) {
-          });
+          command.doChat(event, api);
         } else if (event.body === '#invite') {
           command.doInvited(event, api);
         } else if (event.body === '#leave') {
           command.doLeave(event, api);
         } else if (event.body === '#next') {
-          command.doNext();
+          command.doNext(event, api);
         }
 
         break;
