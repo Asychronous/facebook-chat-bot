@@ -15,9 +15,9 @@ login(option, function callback(err, api) {
         if (event.body === '#chat') {
           doChat();
         } else if (event.body === '#invite') {
-          doInvite();
+          doInvite(event);
         } else if (event.body === '#leave') {
-          doLeave();
+          doLeave(event);
         } else if (event.body === '#next') {
           doNext();
         }
