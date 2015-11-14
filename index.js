@@ -16,7 +16,7 @@ login(config.FACEBOOK, function callback(err, api) {
         } else if (event.body === '#leave') {
           command.doLeave(event, api);
         } else if (event.body === '#next') {
-          command.doNext();
+          command.doNext(event, api);
         }
 
         break;
