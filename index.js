@@ -8,6 +8,7 @@ login(config.FACEBOOK, function callback(err, api) {
   api.listen(function callback(err, event) {
 
     switch (event.type) {
+
       case 'message':
         if (event.body === '#chat') {
           command.doChat(event, api);
@@ -17,6 +18,8 @@ login(config.FACEBOOK, function callback(err, api) {
           command.doLeave(event, api);
         } else if (event.body === '#next') {
           command.doNext(event, api);
+        } else {
+          command.doMessage(event, api);
         }
 
         break;
