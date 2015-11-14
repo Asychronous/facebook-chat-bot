@@ -13,10 +13,7 @@ login(option, function callback(err, api) {
     switch (event.type) {
       case 'message':
         if (event.body === '#chat') {
-          doChat(event, function(err, result) {
-            if (err) {
-              console.log(err);
-            }
+          doChat(event, function(err, success) {
           });
         } else if (event.body === '#invite') {
           doInvite(event, api);
