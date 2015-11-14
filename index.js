@@ -1,12 +1,8 @@
 var login = require('facebook-chat-api');
 var command = require('./lib/command.js');
+var config = require('./lib/config.js');
 
-var option = {
-  email: 'venus.doe.love@gmail.com',
-  password: 'async=hackerthon',
-};
-
-login(option, function callback(err, api) {
+login(config.FACEBOOK, function callback(err, api) {
   if (err) return console.error(err);
 
   api.listen(function callback(err, event) {
