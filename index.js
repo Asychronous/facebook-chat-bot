@@ -19,9 +19,9 @@ login(option, function callback(err, api) {
             }
           });
         } else if (event.body === '#invite') {
-          doInvite(event);
+          doInvite(event, api);
         } else if (event.body === '#leave') {
-          doLeave(event);
+          doLeave(event, api);
         } else if (event.body === '#next') {
           doNext();
         }
