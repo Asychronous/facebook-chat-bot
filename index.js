@@ -1,4 +1,5 @@
 var login = require('facebook-chat-api');
+var command = require('./lib/command.js');
 
 var option = {
   email: 'venus.doe.love@gmail.com',
@@ -13,14 +14,14 @@ login(option, function callback(err, api) {
     switch (event.type) {
       case 'message':
         if (event.body === '#chat') {
-          doChat(event, function(err, success) {
+          command.doChat(event, function(err, success) {
           });
         } else if (event.body === '#invite') {
-          doInvite(event, api);
+          command.doInvite(event, api);
         } else if (event.body === '#leave') {
-          doLeave(event, api);
+          command.doLeave(event, api);
         } else if (event.body === '#next') {
-          doNext();
+          command.doNext();
         }
 
         break;
